@@ -82,7 +82,7 @@ var version = '1.4.12',
     },
     isTouch = 'ontouchend' in document;
 
-$.fn.extend({
+$.extend($.fn, {
   scrollable: function(dir) {
     var scrl = getScrollable.call(this, {dir: dir});
     return this.pushStack(scrl);
@@ -236,4 +236,4 @@ function escapeSelector (str) {
   return str.replace(/(:|\.)/g,'\\$1');
 }
 
-})(jQuery);
+})($);
